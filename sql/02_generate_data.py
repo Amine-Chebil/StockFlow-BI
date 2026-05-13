@@ -16,62 +16,62 @@ cursor = conn.cursor()
 print("Connected successfully!")
 
 # Insert Categories
-# categories = ['Textiles', 'Toys', 'Shoes', 'Accessories', 'Electronics']
+categories = ['Textiles', 'Toys', 'Shoes', 'Accessories', 'Electronics']
 
-# for category in categories:
-#     cursor.execute("INSERT INTO Categories (category_name) VALUES (?)", category)
+for category in categories:
+    cursor.execute("INSERT INTO Categories (category_name) VALUES (?)", category)
 
-# conn.commit()
-# print("Categories inserted!")
+conn.commit()
+print("Categories inserted!")
 
 # Insert Suppliers
 countries = ['France', 'China', 'Turkey', 'Italy', 'Spain', 'Germany', 'USA']
 
-# for _ in range(20):
-#     cursor.execute(
-#         "INSERT INTO Suppliers (supplier_name, country, contact_email) VALUES (?, ?, ?)",
-#         fake.company(),
-#         random.choice(countries),
-#         fake.email()
-#     )
+for _ in range(20):
+    cursor.execute(
+        "INSERT INTO Suppliers (supplier_name, country, contact_email) VALUES (?, ?, ?)",
+        fake.company(),
+        random.choice(countries),
+        fake.email()
+    )
 
-# conn.commit()
-# print("Suppliers inserted!")
+conn.commit()
+print("Suppliers inserted!")
 
 # Insert Products
-# product_names = {
-#     'Textiles': ['Cotton Shirts', 'Denim Jackets', 'Wool Scarves', 'Linen Pants', 'Silk Ties'],
-#     'Toys': ['Toy Cars', 'Lego Sets', 'Stuffed Animals', 'Board Games', 'Puzzles'],
-#     'Shoes': ['Running Shoes', 'Leather Boots', 'Sandals', 'Sneakers', 'Heels'],
-#     'Accessories': ['Leather Belts', 'Sunglasses', 'Watches', 'Handbags', 'Wallets'],
-#     'Electronics': ['Headphones', 'Phone Cases', 'Chargers', 'Keyboards', 'Mice']
-# }
+product_names = {
+    'Textiles': ['Cotton Shirts', 'Denim Jackets', 'Wool Scarves', 'Linen Pants', 'Silk Ties'],
+    'Toys': ['Toy Cars', 'Lego Sets', 'Stuffed Animals', 'Board Games', 'Puzzles'],
+    'Shoes': ['Running Shoes', 'Leather Boots', 'Sandals', 'Sneakers', 'Heels'],
+    'Accessories': ['Leather Belts', 'Sunglasses', 'Watches', 'Handbags', 'Wallets'],
+    'Electronics': ['Headphones', 'Phone Cases', 'Chargers', 'Keyboards', 'Mice']
+}
 
-# for category_id, (category, products) in enumerate(product_names.items(), start=1):
-#     for product in products:
-#         cursor.execute(
-#             "INSERT INTO Products (product_name, category_id, supplier_id, quantity, buy_price) VALUES (?, ?, ?, ?, ?)",
-#             product,
-#             category_id,
-#             random.randint(1, 20),
-#             random.randint(50, 500),
-#             round(random.uniform(5.0, 200.0), 2)
-#         )
+for category_id, (category, products) in enumerate(product_names.items(), start=1):
+    for product in products:
+        cursor.execute(
+            "INSERT INTO Products (product_name, category_id, supplier_id, quantity, buy_price) VALUES (?, ?, ?, ?, ?)",
+            product,
+            category_id,
+            random.randint(1, 20),
+            random.randint(50, 500),
+            round(random.uniform(5.0, 200.0), 2)
+        )
 
-# conn.commit()
-# print("Products inserted!")
+conn.commit()
+print("Products inserted!")
 
 # Insert Customers
-# for _ in range(50):
-#     cursor.execute(
-#         "INSERT INTO Customers (customer_name, customer_email, customer_country) VALUES (?, ?, ?)",
-#         fake.company(),
-#         fake.email(),
-#         random.choice(countries)
-#     )
+for _ in range(50):
+    cursor.execute(
+        "INSERT INTO Customers (customer_name, customer_email, customer_country) VALUES (?, ?, ?)",
+        fake.company(),
+        fake.email(),
+        random.choice(countries)
+    )
 
-# conn.commit()
-# print("Customers inserted!")
+conn.commit()
+print("Customers inserted!")
 
 # Insert Orders
 start_date = date(2023, 1, 1)
