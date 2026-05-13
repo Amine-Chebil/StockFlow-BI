@@ -15,7 +15,7 @@ The platform covers every layer of a production BI system: relational database d
 
 | Layer | Technology |
 |---|---|
-| Database | SQL Server (Developer Edition) |
+| Database | SQL Server (Developer Edition) + PostgreSQL 18 |
 | Query Language | T-SQL (Advanced) |
 | ETL | SSIS (SQL Server Integration Services) |
 | Data Generation | Python (Faker, pyodbc) |
@@ -28,10 +28,13 @@ The platform covers every layer of a production BI system: relational database d
 ```
 SurplusStock-BI/
 ├── sql/
-│   ├── 01_create_tables.sql        # Database schema
-│   ├── 02_generate_data.py         # Script to generate data
-│   ├── 03_queries.sql              # 10 business SQL queries
-│   └── 04_stored_procedures.sql    # Stored procedures
+│   ├── 01_create_tables.sql             # Database schema (SQL Server)
+│   ├── 01_create_tables_postgres.sql    # Database schema (PostgreSQL)
+│   ├── 02_generate_data.py              # Data generation (SQL Server)
+│   ├── 02_generate_data_postgres.py     # Data generation (PostgreSQL)
+│   ├── 03_queries.sql                   # Business queries (SQL Server)
+│   ├── 03_queries_postgres.sql          # Business queries (PostgreSQL)
+│   └── 04_stored_procedures.sql         # Stored procedures
 ├── etl/
 │   ├── SurplusStock_ETL/           # SSIS project - automated ETL pipeline
 │   └── new_stock.csv               # Sample supplier stock file
