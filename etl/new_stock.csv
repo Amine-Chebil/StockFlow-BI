@@ -1,0 +1,6 @@
+product_name,category_id,supplier_id,quantity,buy_price
+Winter Jackets,1,3,50,45.00
+Yoga Mats,2,9,100,20.00
+Flip Flops,3,2,400,12.00
+Wool Hats,1,6,180,15.00
+Smart Watches,5,11,90,120.00
