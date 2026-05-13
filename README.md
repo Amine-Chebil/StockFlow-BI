@@ -20,7 +20,6 @@ The platform covers every layer of a production BI system: relational database d
 | ETL | SSIS (SQL Server Integration Services) |
 | Data Generation | Python (Faker, pyodbc) |
 | Dashboarding | Power BI Desktop |
-| Version Control | Git / GitHub |
 
 ---
 
