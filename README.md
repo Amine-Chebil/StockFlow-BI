@@ -1,5 +1,5 @@
 # StockFlow BI
-> A Business Intelligence for a B2B surplus inventory operation.
+> A Business Intelligence solution for a B2B surplus inventory operation.
 
 ---
 
